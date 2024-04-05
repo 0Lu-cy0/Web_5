@@ -33,12 +33,34 @@
                     <!-- USER SECTION (CART AND USER ICON) -->
                     <div id="user">
                         <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
-                        <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        <a href="#" onclick="openModal()"> <i class="fas fa-user-circle userIcon"></i> </a>
                     </div>
             </div>
 
         </section>
     </header>
+
+    <!-- User Info Modal -->
+    <div id="userInfoModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 30%;">
+            <span style="color: #aaaaaa; float: right; font-size: 28px; font-weight: bold;" onclick="closeModal()">×</span>
+            <p>Tên: Nguyễn Xuân Hoàng Cường</p>
+            <p>Lớp: D17CNPM1</p>
+            <p>Mã sinh viên: 22810310036</p>
+            <p>Gmail: nc12042004@gmail.com</p>
+            <p>Số điện thoại: 0337250728</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('userInfoModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('userInfoModal').style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
